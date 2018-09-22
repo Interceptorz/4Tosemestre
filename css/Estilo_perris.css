@@ -1,0 +1,553 @@
+
+.topnav {
+    background-color: blue;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav button {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav button:hover {
+    background-color: transparent;
+    color:#66CDAA;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #66CDAA;
+    color: black
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav button:not(:first-child) {display: none;}
+    .topnav button.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive button.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive button {
+      float: none;
+      display: inline-block;
+      left: 50%;
+      width: 100%;
+    }
+
+    .topnav{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        margin: 0 auto;
+    }
+
+  }
+
+
+
+  .carrusel_imagen {
+
+    width: 100%;
+    max-height: 400px;
+  }
+
+    
+@media (max-width:991px){
+  .img_space{
+    margin-bottom:10px;
+  }
+  
+  
+  }
+
+  ul {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    display:flex;
+}
+ul li {
+    list-style:none;
+    margin:0 80px;
+}
+ul li a {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: block;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+}
+ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+ul li a .fa{
+    width:100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    color: #262626;
+    border-radius: 50%;
+    line-height: calc(90px - 12px);
+    font-size: 40px;
+}
+ul li:nth-child(1) a:hover .fa {
+    color: #00f;
+}
+ul li:nth-child(2) a:hover .fa {
+    color: #00aced;
+}
+ul li:nth-child(3) a:hover .fa {
+    color: #dd4b39;
+}
+ul li:nth-child(4) a:hover .fa {
+    color: #007bb6;
+}
+ul li:nth-child(5) a:hover .fa {
+    color: #bc2a8d;
+}
+
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+.gal-container{
+	padding: 12px;
+}
+.gal-item{
+	overflow: hidden;
+	padding: 3px;
+}
+.gal-item .box{
+	height: 350px;
+	overflow: hidden;
+}
+.box img{
+	height: 100%;
+	width: 100%;
+	object-fit:cover;
+	-o-object-fit:cover;
+}
+.gal-item a:focus{
+	outline: none;
+}
+.gal-item a:after{
+	content:"\e003";
+	font-family: 'Glyphicons Halflings';
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.75);
+	position: absolute;
+	right: 3px;
+	left: 3px;
+	top: 3px;
+	bottom: 3px;
+	text-align: center;
+    line-height: 350px;
+    font-size: 30px;
+    color: #fff;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.gal-item a:hover:after{
+	opacity: 1;
+}
+.modal-open .gal-container .modal{
+	background-color: rgba(0,0,0,0.4);
+}
+.modal-open .gal-item .modal-body{
+	padding: 0px;
+}
+.modal-open .gal-item button.close{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    opacity: 1;
+    color: #fff;
+    z-index: 999;
+    right: -12px;
+    top: -12px;
+    border-radius: 50%;
+    font-size: 15px;
+    border: 2px solid #fff;
+    line-height: 25px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
+	box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
+}
+.modal-open .gal-item button.close:focus{
+	outline: none;
+}
+.modal-open .gal-item button.close span{
+	position: relative;
+	top: -3px;
+	font-weight: lighter;
+	text-shadow:none;
+}
+.gal-container .modal-dialogue{
+	width: 80%;
+}
+.gal-container .description{
+	position: relative;
+	height: 40px;
+	top: -40px;
+	padding: 10px 25px;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	text-align: left;
+}
+.gal-container .description h4{
+	margin:0px;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 20px;
+}
+.gal-container .modal.fade .modal-dialog {
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+    top: 100px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.gal-container .modal.fade.in .modal-dialog {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+    opacity: 1;
+}
+@media (min-width: 768px) {
+    .gal-container .modal-dialog {
+    width: 55%;
+        margin: auto;
+    }
+}
+@media (max-width: 768px) {
+    .gal-container .modal-content{
+        height:250px;
+    }
+}
+/* Footer Style */
+i.red{
+    color:#BC0213;
+}
+.gal-container{
+    padding-top :75px;
+    padding-bottom:75px;
+}
+footer{
+    font-family: 'Quicksand', sans-serif;
+}
+footer a,footer a:hover{
+    color: #88C425;
+}
+
+.cuadrado1{
+  background: white;
+  width: 50%; 
+}
+.cuadrado2{
+
+  background: white; 
+  width: 50%;
+  padding-left: 8px;
+
+}
+
+.plato{
+padding: 4px; margin-left: 4px; width: 95%; max-height: 350px ; max-width: 800px;
+}
+
+.titulos{
+
+    font-size: 35px;
+    font-weight: bold;
+}
+.subtitulos{
+
+    font-size: 24px;
+    font-weight: bold;
+    color: gray;
+
+}
+
+.gtitulo{
+ font-size: 28px;
+}
+
+.gdescripcion{
+
+    font-size: 14px;
+}
+
+
+
+
+@media screen and   (max-width: 800px) {
+
+.plato{
+  padding: 4px; margin-left: 4px;  width: 50%;
+}
+  .cuadrado1{
+    background: white;
+    width: 100%;
+  }
+  .cuadrado2{
+    background: white;
+    width: 100%;
+  }
+  .titulos{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.subtitulos{
+
+    font-size: 24px;
+    font-weight: bold;
+    color: gray;
+
+}
+}
+.button {
+    background-color: rgb(255, 255, 255);
+    border-color: black;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 3px 2px;
+    cursor: pointer;
+}
+
+.galeria{
+    
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+        object-fit: none; 
+        object-position: center; 
+        
+    
+}
+
+input:valid, textarea:valid {
+  border-radius: 5px;
+  background-color: #def;
+  
+}
+input:invalid, textarea:invalid {
+  border-radius: 5px;
+  background-color: #ffdddd;
+}
+
+select:valid, textarea:valid{
+    border-radius: 5px;
+    background-color: #def;
+}
+
+select:invalid, textarea:invalid {
+    border-radius: 5px;
+    background-color: #ffdddd;
+  }
+
+.contactanos{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center; 
+}
+
+.Centrar{
+
+    text-align: center;
+
+}
+
+.FormTitulo{
+
+    font-size: 24px;
+}
+
+.barranav{
+    background: transparent; 
+    display: flex; 
+    justify-content: space-between
+}
+
+.servicios{
+
+    background: white; 
+    width: 100%; 
+    left: 50%;  
+    left: 0;
+    text-align: right;
+    
+
+}
+.servicios .p  {
+
+    text-align: right;
+    
+    
+}
+
+.servicios .h5 {
+
+    text-align: right;
+    
+
+}
+
+.servicios .h1 {
+
+    text-align: right;
+    
+
+}
+
+.negrita{
+
+    font-weight: bold;
+}
+
+.prescate{
+
+    padding:2px; 
+    width: 40%; 
+    max-height: 250px; 
+    min-height: 125px; 
+    min-width: 200px  
+
+}
+
+.fondo1{
+
+    background: #66CDAA;
+}
+
+.fondo2{
+    background: rgb(74, 161, 132);
+}
+
+
+.principal{
+    background: #66CDAA; 
+    width: 100%; 
+
+}
+
+.Lselect{
+
+    height: 30px;
+
+}
+
+.imgcarrusel{
+    width: 100%; 
+    max-height: 400px
+}
+
+.w100{
+ width: 100%;
+}
+
+.Alinear{
+    padding-left: 0; 
+    padding-right: 0; 
+    margin-left: 0; 
+    margin-right: 0
+
+}
+
+.ticono{
+    max-width: 50px;
+}
+
+.piepagina{
+
+    background: lightgrey; 
+    width: 100%; 
+    height: 100%; 
+    min-height: 75px;  
+
+}
+
+.lpie{
+
+    color: black; 
+    font-size: 30px;
+
+}
+
+.Tcarrusel{
+
+    text-align: left;
+    font-size:1.5vw;
+    color: white;
+
+}
+
+@media screen and (max-width: 900px) {
+    .Tcarrusel{
+
+        text-align: left;
+        font-size:3vw;
+        color: white;
+    
+    }
+
+  }
+
+
